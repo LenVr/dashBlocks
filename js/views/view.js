@@ -1,7 +1,7 @@
-import { div } from "../librerias/html";
+import { div } from "../librerias/html.js";
 
 export class View {
-    constructor() {
+    constructor(parent) {
         this.parent = parent;
         this.container = div(parent, null)
     }

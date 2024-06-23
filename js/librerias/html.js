@@ -19,6 +19,10 @@ export const h2 = function (parent, attributes) {
     return createElement('h2', parent, attributes);
 }
 
+export const a = function (parent, attributes) {
+    return createElement('a', parent, attributes);
+}
+
 const createElement = function (type, parent, attributes) {
     let element = document.createElement(type);
     parent.appendChild(element);

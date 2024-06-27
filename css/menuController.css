@@ -9,30 +9,54 @@
     user-select: none;
 }
 
+/* Bottom section */
+
 .bottomContainer {
-    position: fixed;
-
-    bottom: 0;
     width: 100%;
-}
-
-.controlsContainer {
-    position: fixed;
-    right: 0;
-
-    color: white;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.sideInfoContainer {
+    color: rgba(28, 200, 0, 1);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 50%;
+    height: 100%;
+
+    margin-left: 5%;
+}
+
+.sideTutorialContainer {
+    width: 50%;
+    height: 100%;
+}
+
+.controlsContainer {
+    color: white;
     margin: 20px;
-    margin-top: -40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.squareContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .control {
-    width: 70px;
-    height: 70px;
+    width: 10vw;
+    height: 5vh;
     margin: 10px;
 
     background-color: transparent;
@@ -45,16 +69,5 @@
     justify-content: center;
     align-items: center;
 
-    user-select: none;
-}
-
-.sideInfoContainer {
-    color: rgba(28, 200, 0, 1);
-
-    display: flex;
-    align-items: first baseline;
-    flex-direction: column;
-
-    margin: 20px;
     user-select: none;
 }

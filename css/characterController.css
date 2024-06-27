@@ -1,0 +1,8 @@
+.characterAppearance {
+    width: 5vw;
+    height: 3vh;
+    background-color: rgba(28, 200, 0, 1);
+
+    border: 2px rgba(2, 254, 94, 0.923) solid;
+    border-radius: 2px;
+}

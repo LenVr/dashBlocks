@@ -5,7 +5,7 @@ import { View } from "../../views/view.js";
 export class CharacterView extends View {
 
     x = 50;
-    speed = 15;
+    speed = 25;
     movement;
     width = 3;
 
@@ -13,7 +13,6 @@ export class CharacterView extends View {
         super(parent);
         this.controller = controller;
         this.container.className = 'characterAppearance'
-        this.square = div(this.container, { className: 'square' });
 
         this.container.style.position = 'fixed';
         this.container.style.left = this.x + 'px';

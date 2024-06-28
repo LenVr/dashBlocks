@@ -27,6 +27,10 @@ body {
     position: absolute;
 }
 
+.hidden {
+    display: none;
+}
+
 .fade {
     position: fixed;
     top: 0;

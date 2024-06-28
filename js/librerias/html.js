@@ -23,6 +23,10 @@ export const a = function (parent, attributes) {
     return createElement('a', parent, attributes);
 }
 
+export const i = function (parent, attributes) {
+    return createElement('i', parent, attributes);
+}
+
 const createElement = function (type, parent, attributes) {
     let element = document.createElement(type);
     parent.appendChild(element);

@@ -5,7 +5,7 @@ export class Controller {
         this.view = null;
     }
 
-    /* delete() {
-        this.view.moveOut()
-    } */
+    delete() {
+        this.view.delete();
+    }
 }

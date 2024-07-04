@@ -1,18 +1,18 @@
 import { ERROR, NONE, SUCCESS, WARNING } from "./constantes.js";
 
-export const successAlert = function (message, parent) {
-    return alert(SUCCESS, message, parent)
+export const successAlert = function (message, btnContent, parent) {
+    return alert(SUCCESS, message, btnContent, parent)
 }
 
-export const errorAlert = function (message, parent) {
-    return alert(ERROR, message, parent)
+export const errorAlert = function (message, btnContent, parent) {
+    return alert(ERROR, message, btnContent, parent)
 }
 
-export const warningAlert = function (message, parent) {
-    return alert(WARNING, message, parent)
+export const warningAlert = function (message, btnContent, parent) {
+    return alert(WARNING, message, btnContent, parent)
 }
 
-const alert = function (type, message, parent) {
+const alert = function (type, message, btnContent, parent) {
 
     let div = document.createElement('div');
     div.className = 'alertDiv';
@@ -50,6 +50,10 @@ const alert = function (type, message, parent) {
 
     let btn = document.createElement('div');
     btn.className = 'continueBtn';
-    btn.innerHTML = 'Continue';
+    btn.innerHTML = btnContent;
     div.appendChild(btn);
+
+    btn.addEventListener('click', () => {
+        parent.removeChild(div)
+    })
 }

@@ -19,6 +19,6 @@ export class LoginView extends ViewEnhanced {
     }
 
     onLoginBtn() {
-        successAlert('You logged in successfully', this.elementsContainer)
+        successAlert('You logged in successfully', 'Continue', this.elementsContainer)
     }
 }

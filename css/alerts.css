@@ -1,0 +1,47 @@
+.alertDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: absolute;
+
+    width: 40vw;
+    height: 50vh;
+
+    background-color: black;
+    border: 1px solid white;
+}
+
+.alertText {
+    color: white;
+    font-size: 2vi;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 4vw;
+    margin-bottom: 20px;
+
+    color: white;
+}
+
+.continueBtn {
+    color: white;
+    font-size: 2vw;
+
+    width: 50%;
+    height: 40px;
+
+    background-color: transparent;
+    border: 1px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.continueBtn:hover {
+    cursor: pointer;
+}

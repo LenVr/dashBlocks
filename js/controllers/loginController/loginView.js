@@ -1,3 +1,4 @@
+import { errorAlert, successAlert, warningAlert } from "../../librerias/alerts.js";
 import { h2, input, div, p } from "../../librerias/html.js";
 import { ViewEnhanced } from "../../views/viewEnhanced.js";
 import { ReturnController } from "../returnController/returnController.js";
@@ -12,8 +13,12 @@ export class LoginView extends ViewEnhanced {
 
         this.passwordLabel = p(this.elementsContainer, { className: 'loginInputLabel', textContent: 'Password' })
         this.passwordInput = input(this.elementsContainer, { className: "inputLogin", type: 'password' });
-        this.loginBtn = div(this.elementsContainer, { className: 'menuBtns', innerHTML: 'Login' });
+        this.loginBtn = div(this.elementsContainer, { className: 'menuBtns', innerHTML: 'Login', onclick: this.onLoginBtn.bind(this) });
 
         this.backBtn = new ReturnController(this, this.elementsContainer);
+    }
+
+    onLoginBtn() {
+        successAlert('You logged in successfully', this.elementsContainer)
     }
 }

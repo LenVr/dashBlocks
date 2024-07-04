@@ -13,9 +13,8 @@ export class ReturnController extends Controller {
         this.hideBackBtn()
     }
 
-
     onBackBtn() {
-        this.appManager.showController(MENU);
+        this.appManager.delete()
     }
 
     hideBackBtn() {
@@ -25,5 +24,4 @@ export class ReturnController extends Controller {
     showBackBtn() {
         this.backBtn.classList.remove('hidden')
     }
-
 }

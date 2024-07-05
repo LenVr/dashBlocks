@@ -11,7 +11,7 @@ export class MenuView extends ViewEnhanced {
 
         this.titleImg = img(this.elementsContainer, { className: 'titleImg', src: '../../../assets/DashBlocksLogo.png' });
         this.loginBtn = div(this.elementsContainer, { className: 'menuBtns', innerHTML: 'Login', onclick: this.onLoginBtn.bind(this) });
-        this.optionBtn = div(this.elementsContainer, { className: 'menuBtns', innerHTML: 'Options' });
+        this.optionBtn = div(this.elementsContainer, { className: 'menuBtns', innerHTML: 'Options', onclick: this.onOptionsBtn.bind(this) });
         this.bottomContainer = div(this.elementsContainer, { className: "bottomContainer" });
 
         this.sideInfoContainer = div(this.bottomContainer, { className: "sideInfoContainer" });
@@ -31,5 +31,9 @@ export class MenuView extends ViewEnhanced {
 
     onLoginBtn() {
         this.controller.appManager.showController(LOGIN);
+    }
+
+    onOptionsBtn() {
+        this.controller.appManager.showController(OPTION);
     }
 }

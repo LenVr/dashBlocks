@@ -19,6 +19,16 @@ export class LoginView extends ViewEnhanced {
     }
 
     onLoginBtn() {
-        successAlert('You logged in successfully', 'Continue', this.elementsContainer)
+        let username = this.usernameInput.value;
+        let password = this.passwordInput.value;
+        let passwordSaved = 'cisco'; /* We need to change this to the correct verification way */
+
+        if (username === null || username === '' || username === undefined) {
+            errorAlert('You need to enter a username', 'try again', this.elementsContainer);
+        } else if (password === null || password === '' || password === undefined || password != passwordSaved) {
+            errorAlert('Your password is not correct', 'try again', this.elementsContainer);
+        } else {
+            successAlert('You logged in successfully', 'Continue', this.elementsContainer)
+        }
     }
 }

@@ -1,4 +1,4 @@
-import { LOGIN } from "../../librerias/constantes.js";
+import { LOGIN, OPTION } from "../../librerias/constantes.js";
 import { a, div, h2, img, p } from "../../librerias/html.js";
 import { ViewEnhanced } from "../../views/viewEnhanced.js";
 import { CharacterController } from "../mainCharacter/characterController.js";

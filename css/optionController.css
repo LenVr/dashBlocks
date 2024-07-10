@@ -1,0 +1,52 @@
+.characterContainerOpt {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: inherit;
+}
+
+.selectContainer {
+    width: 60vw;
+    height: 10vh;
+    border: 2px solid green;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.changeColorTitle {
+    color: rgba(28, 200, 0, 1);
+    font-size: 25px;
+}
+
+.btnColor {
+    width: 23%;
+    height: 80%;
+    margin: 5px;
+    transition: transform 0.5s ease;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#pink:hover,
+#blue:hover,
+#green:hover,
+#red:hover {
+    cursor: pointer;
+    transform: scale(1.09)
+}

@@ -50,3 +50,11 @@
     cursor: pointer;
     transform: scale(1.09)
 }
+
+.red {
+    width: 5vw;
+    height: 3vh;
+    background-color: red;
+    border: 2px red solid;
+    border-radius: 2px;
+}

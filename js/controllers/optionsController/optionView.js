@@ -13,10 +13,15 @@ export class OptionView extends ViewEnhanced {
         this.changeColorText = p(this.elementsContainer, { className: 'changeColorTitle', textContent: 'Change color' });
         this.selectColorContainer = div(this.elementsContainer, { className: 'selectContainer' });
 
-        this.red = div(this.selectColorContainer, { id: 'red', className: 'btnColor' });
+        this.red = div(this.selectColorContainer, { id: 'red', className: 'btnColor', onclick: this.onChangeToRed.bind(this) });
         this.green = div(this.selectColorContainer, { id: 'green', className: 'btnColor' });
         this.blue = div(this.selectColorContainer, { id: 'blue', className: 'btnColor' });
         this.pink = div(this.selectColorContainer, { id: 'pink', className: 'btnColor' });
 
+    }
+
+    onChangeToRed() {
+        this.character.backgroundColor = 'red';
+        console.log(this.character)
     }
 }

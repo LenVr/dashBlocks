@@ -13,6 +13,7 @@ export class CharacterView extends View {
         super(parent);
         this.controller = controller;
         this.container.className = 'characterAppearance'
+        this.container.id = 'mainCharacter'
 
         this.container.style.position = 'fixed';
         this.container.style.left = this.x + 'px';

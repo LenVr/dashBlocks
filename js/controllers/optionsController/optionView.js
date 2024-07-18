@@ -1,6 +1,6 @@
 import { div, p } from "../../librerias/html.js";
 import { ViewEnhanced } from "../../views/viewEnhanced.js";
-import { CharacterController } from "../mainCharacter/characterController.js"
+import { GreenCharacterController } from "../characters/greenCharacterController.js"
 
 
 export class OptionView extends ViewEnhanced {
@@ -9,7 +9,7 @@ export class OptionView extends ViewEnhanced {
         this.container.className = 'optionController';
 
         this.characterContainer = div(this.elementsContainer, { className: "characterContainerOpt" })
-        this.character = new CharacterController(this, this.characterContainer);
+        this.character = new GreenCharacterController(this, this.characterContainer);
         this.changeColorText = p(this.elementsContainer, { className: 'changeColorTitle', textContent: 'Change color' });
         this.selectColorContainer = div(this.elementsContainer, { className: 'selectContainer' });
 

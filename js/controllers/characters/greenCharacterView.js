@@ -2,7 +2,7 @@ import { div } from "../../librerias/html.js";
 import { View } from "../../views/view.js";
 
 
-export class CharacterView extends View {
+export class GreenCharacterView extends View {
 
     x = 50;
     speed = 25;

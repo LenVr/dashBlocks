@@ -1,7 +1,7 @@
 import { LOGIN, OPTION } from "../../librerias/constantes.js";
 import { a, div, h2, img, p } from "../../librerias/html.js";
 import { ViewEnhanced } from "../../views/viewEnhanced.js";
-import { CharacterController } from "../mainCharacter/characterController.js";
+import { GreenCharacterController } from "../characters/greenCharacterController.js";
 
 
 export class MenuView extends ViewEnhanced {
@@ -22,7 +22,7 @@ export class MenuView extends ViewEnhanced {
         this.sideTutorialContainer = div(this.bottomContainer, { className: "sideTutorialContainer" })
         this.squareContainer = div(this.sideTutorialContainer, { className: "squareContainer" });
         this.textTutorial = div(this.squareContainer, { className: 'textControl', innerHTML: "Press the arrows in your keyboard to move" })
-        this.character = new CharacterController(this, this.squareContainer);
+        this.character = new GreenCharacterController(this, this.squareContainer);
 
         this.controlsContainer = div(this.sideTutorialContainer, { className: "controlsContainer" });
         this.right = div(this.controlsContainer, { className: "control", innerHTML: "<" })

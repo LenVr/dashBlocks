@@ -2,7 +2,7 @@ import { div } from "../../librerias/html.js";
 import { View } from "../../views/view.js";
 
 
-export class GreenCharacterView extends View {
+export class CharacterView extends View {
 
     x = 50;
     speed = 25;
@@ -12,7 +12,7 @@ export class GreenCharacterView extends View {
     constructor(controller, parent) {
         super(parent);
         this.controller = controller;
-        this.container.className = 'characterAppearance'
+        this.container.classList = 'characterAppearance'
         this.container.id = 'mainCharacter'
 
         this.container.style.position = 'fixed';

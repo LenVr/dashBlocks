@@ -5,8 +5,10 @@
     width: inherit;
 }
 
+/* set color */
+
 .selectContainer {
-    width: 60vw;
+    width: 50vw;
     height: 10vh;
     border: 2px solid green;
 
@@ -21,9 +23,9 @@
 }
 
 .btnColor {
-    width: 23%;
+    width: 20%;
     height: 80%;
-    margin: 5px;
+    margin: 8px;
     transition: transform 0.5s ease;
 }
 
@@ -49,4 +51,62 @@
 #red:hover {
     cursor: pointer;
     transform: scale(1.09)
+}
+
+/* Set volume */
+
+.volumeTitle {
+    color: rgba(28, 200, 0, 1);
+    font-size: 25px;
+
+    margin: 20px;
+}
+
+.setVolumeContainer {
+    width: 50vw;
+    height: 10vh;
+    background-color: rgba(27, 200, 0, 0.098);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.volumeIcon {
+    color: rgba(28, 200, 0, 1);
+    font-size: 30px;
+}
+
+.barsVolumeContainer {
+    width: 90%;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: row;
+}
+
+.volumeBars {
+    width: 25%;
+    height: 95%;
+
+    background-color: rgba(28, 200, 0, 1);
+    margin: 5px;
+}
+
+.volumeBars:hover {
+    cursor: pointer;
+}
+
+/* Btns Container */
+
+.btnsContainer {
+    margin: 20px;
+    width: 50vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

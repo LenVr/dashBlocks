@@ -1,3 +1,4 @@
+import { BLUE, GREEN, PINK, RED } from "../../librerias/constantes.js";
 import { div } from "../../librerias/html.js";
 import { View } from "../../views/view.js";
 
@@ -12,7 +13,9 @@ export class CharacterView extends View {
     constructor(controller, parent) {
         super(parent);
         this.controller = controller;
-        this.container.classList = 'characterAppearance'
+        this.container.className = 'characterAppearance';
+        this.container.classList = localStorage.getItem('color');
+
         this.container.id = 'mainCharacter'
 
         this.container.style.position = 'fixed';
@@ -77,4 +80,40 @@ export class CharacterView extends View {
         clearInterval(this.movement);
         this.movement = undefined;
     };
+
+    changeColor(color) {
+        switch (color) {
+            case RED:
+
+                this.container.classList.add('red');
+                this.container.classList.remove('green', 'pink', 'blue');
+                localStorage.setItem('color', 'red');
+
+                break;
+            case GREEN:
+
+                this.container.classList.add('green');
+                this.container.classList.remove('red', 'pink', 'blue');
+                localStorage.setItem('color', 'green');
+
+                break;
+            case BLUE:
+
+                this.container.classList.add('blue');
+                this.container.classList.remove('green', 'pink', 'red');
+                localStorage.setItem('color', 'blue');
+
+
+                break;
+            case PINK:
+
+                this.container.classList.add('pink');
+                this.container.classList.remove('green', 'red', 'blue');
+                localStorage.setItem('color', 'pink');
+
+                break;
+            default:
+                break;
+        };
+    }
 }

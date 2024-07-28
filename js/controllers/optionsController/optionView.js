@@ -1,5 +1,4 @@
-import { successAlert } from "../../librerias/alerts.js";
-import { BLUE, GREEN, PINK, RED } from "../../librerias/constantes.js";
+import { BLUE, CREDITS, GREEN, PINK, RED } from "../../librerias/constantes.js";
 import { div, p } from "../../librerias/html.js";
 import { ViewEnhanced } from "../../views/viewEnhanced.js";
 import { CharacterController } from "../characters/characterController.js"
@@ -42,7 +41,7 @@ export class OptionView extends ViewEnhanced {
         /* log out */
 
         this.btnsContainer = div(this.elementsContainer, { className: 'btnsContainer' })
-        this.creditsBtn = div(this.btnsContainer, { className: 'menuBtns', innerHTML: 'Credits' });
+        this.creditsBtn = div(this.btnsContainer, { className: 'menuBtns', innerHTML: 'Credits', onclick: this.OnCreditsBtn.bind(this) });
         this.logBtn = div(this.btnsContainer, { className: 'menuBtns', innerHTML: 'Login' });
     }
 
@@ -60,5 +59,9 @@ export class OptionView extends ViewEnhanced {
 
     onChangeToPink() {
         this.character.character.changeColor(PINK);
+    }
+
+    OnCreditsBtn() {
+        this.controller.appManager.showController(CREDITS);
     }
 }

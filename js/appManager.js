@@ -1,11 +1,12 @@
 
-import { LOGIN, MENU, NONE, OPTION } from "./librerias/constantes.js"
+import { CREDITS, LOGIN, MENU, NONE, OPTION } from "./librerias/constantes.js"
 import { div } from "./librerias/html.js";
 
 import { MenuController } from "./controllers/menuController/menuController.js";
 import { LoginController } from "./controllers/loginController/loginController.js";
 import { ReturnController } from "./controllers/returnController/returnController.js";
 import { OptionController } from "./controllers/optionsController/optionController.js"
+import { CreditsController } from "./controllers/creditsController/creditsController.js";
 
 export class AppManager {
     constructor() {
@@ -35,6 +36,9 @@ export class AppManager {
                 break;
             case OPTION:
                 this.currentController = new OptionController(this, this.controllerContainer);
+                break
+            case CREDITS:
+                this.currentController = new CreditsController(this, this.controllerContainer);
                 break
         }
     }

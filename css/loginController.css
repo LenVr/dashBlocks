@@ -9,21 +9,3 @@
     color: rgba(28, 200, 0, 1);
     margin: 2%;
 }
-
-.loginInputLabel {
-    color: rgba(28, 200, 0, 1);
-    font-size: 30px;
-}
-
-.inputLogin {
-    width: 50%;
-    height: 3vh;
-    margin: 2%;
-
-    background-color: rgba(27, 200, 0, 0.06);
-    border: 2px solid rgba(28, 200, 0, 1);
-
-    color: white;
-    font-size: 20px;
-    font-family: "Pixelify Sans", cursive;
-}

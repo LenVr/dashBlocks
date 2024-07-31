@@ -1,5 +1,5 @@
 
-import { CREDITS, LOGIN, MENU, NONE, OPTION } from "./librerias/constantes.js"
+import { CREDITS, LOGIN, MENU, NONE, OPTION, REGISTER } from "./librerias/constantes.js"
 import { div } from "./librerias/html.js";
 
 import { MenuController } from "./controllers/menuController/menuController.js";
@@ -7,6 +7,7 @@ import { LoginController } from "./controllers/loginController/loginController.j
 import { ReturnController } from "./controllers/returnController/returnController.js";
 import { OptionController } from "./controllers/optionsController/optionController.js"
 import { CreditsController } from "./controllers/creditsController/creditsController.js";
+import { RegisterController } from "./controllers/registerController/registerController.js";
 
 export class AppManager {
     constructor() {
@@ -39,6 +40,9 @@ export class AppManager {
                 break
             case CREDITS:
                 this.currentController = new CreditsController(this, this.controllerContainer);
+                break
+            case REGISTER:
+                this.currentController = new RegisterController(this, this.controllerContainer);
                 break
         }
     }

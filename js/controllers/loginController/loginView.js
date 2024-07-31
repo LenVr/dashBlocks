@@ -18,6 +18,8 @@ export class LoginView extends ViewEnhanced {
 
         this.registBtn = div(this.elementsContainer, { className: 'link', textContent: `Don't have an account? Register here`, onclick: this.onRegisterBtn.bind(this) });
 
+        this.forgotPass = div(this.elementsContainer, { className: 'link', textContent: `I forgot my password` });
+
         this.backBtn = new ReturnController(this, this.elementsContainer);
     }
 

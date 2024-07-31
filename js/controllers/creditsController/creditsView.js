@@ -12,7 +12,7 @@ export class CreditsView extends ViewEnhanced {
         this.title = h2(this.elementsContainer, { className: 'creditsTitle', textContent: 'Developer' });
         this.developer = p(this.elementsContainer, { className: 'developerParagraph', textContent: 'Brandon Len Villalobos Rojas' });
         this.secondTitle = h2(this.elementsContainer, { className: 'creditsTitle', textContent: 'Co-developer' });
-        this.coDeveloper = p(this.elementsContainer, { className: 'developerParagraph', textContent: 'My best friend, my beautiful dog, Zoe' });
+        this.coDeveloper = p(this.elementsContainer, { className: 'developerParagraph', textContent: 'My best friend and my beautiful dog, Zoe' });
 
         this.webContainer = div(this.elementsContainer, { className: 'webContainer' });
         this.linkedIn = a(this.webContainer, { className: 'link', textContent: 'LinkedIn', href: 'https://www.linkedin.com/in/brandon-l-villalobos-rojas-8a5172220', target: "_blank" });

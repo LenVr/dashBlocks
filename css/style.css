@@ -78,3 +78,21 @@ body {
     transform: scale(1.10);
     cursor: pointer;
 }
+
+.link {
+    margin: 20px;
+    text-decoration: none;
+    color: rgb(0, 123, 255);
+    font-size: 20px;
+
+    border: 2px solid rgb(0, 123, 255);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+
+    transition: transform 0.5s ease;
+}
+
+.link:hover {
+    cursor: pointer;
+}

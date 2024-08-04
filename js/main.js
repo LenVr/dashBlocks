@@ -1,3 +1,4 @@
+import '../dataBase/signUp.js';
 import { AppManager } from "./appManager.js"
 
 

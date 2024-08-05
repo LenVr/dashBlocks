@@ -33,8 +33,15 @@ export class RegisterView extends ViewEnhanced {
         } else if (passwordInput.length < 6) {
             errorAlert('Your password needs to be greater than 6 characters', 'try again', this.elementsContainer);
         } else {
-            signUp();
-            successAlert('Congrats! You have signed up', 'continue', this.elementsContainer);
+            signUp().then((success) => {
+                if (success) {
+                    successAlert('Congrats! You have signed up', 'continue', this.elementsContainer);
+                } else {
+                    errorAlert('Email is already in use or another error occurred', 'try again', this.elementsContainer);
+                }
+            }).catch((error) => {
+                errorAlert(`Something went wrong, error ${error}`, 'try again', this.elementsContainer);
+            })
         }
     }
-}
+};

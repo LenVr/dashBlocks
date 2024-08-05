@@ -6,14 +6,18 @@ export const signUp = async function () {
 
     const inputEmail = document.getElementById('usernameRegister');
     const inputPassword = document.getElementById('passwordRegister');
-    const email = inputEmail.value
-    const password = inputPassword.value
+    const email = inputEmail.value;
+    const password = inputPassword.value;
 
     console.log(password, email);
 
     try {
         await createUserWithEmailAndPassword(auth, email, password);
+        return true;
     } catch (error) {
-        console.log(error)
+        if (error.code === 'auth/email-already-in-use') {
+            return false;
+        }
+        return false;
     }
 }

@@ -14,7 +14,7 @@ export class LoginView extends ViewEnhanced {
 
         this.passwordLabel = p(this.elementsContainer, { className: 'inputLabel', textContent: 'Password' })
         this.passwordInput = input(this.elementsContainer, { className: "inputSpace", type: 'password' });
-        this.loginBtn = div(this.elementsContainer, { className: 'menuBtns', innerHTML: 'Login', onclick: this.onLoginBtn.bind(this) });
+        this.loginBtn = div(this.elementsContainer, { className: 'menuBtns', innerHTML: 'Login', onclick: this.onLoginBtn.bind(this), id: 'loggedOut' });
 
         this.registBtn = div(this.elementsContainer, { className: 'link', textContent: `Don't have an account? Register here`, onclick: this.onRegisterBtn.bind(this) });
 
